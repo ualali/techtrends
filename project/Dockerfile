@@ -1,7 +1,7 @@
 FROM python:2.7
 LABEL maintainer="ualali"
 
-ADD ./project/techtrends /app
+ADD ./techtrends /app
 WORKDIR /app
 
 EXPOSE 3111
