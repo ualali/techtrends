@@ -24,6 +24,5 @@ jobs:
         with:
           context: ./project
           file: ./Dockerfile
-          platforms: linux/amd64
           push: true
-          tags: ualali/techtrends:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends:latest
