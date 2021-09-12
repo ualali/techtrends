@@ -3,3 +3,6 @@ project/techtrends/venv/
 
 # Database
 project/techtrends/database.db
+
+# Vagrant
+project/.vagrant/
