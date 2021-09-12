@@ -1,10 +1,31 @@
 import sqlite3
 import logging
 
-from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
+from flask import Flask, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
 connection_count = 0
+
+
+def is_healthy():
+    """
+    Checks if the app is healthy.
+
+    This function test if:
+        - The connection to the database doesn't throw any error.
+        - The "posts" table exists.
+
+    Returns:
+        True if healthy, otherwise returns false.
+    """
+    try:
+        connection = get_db_connection()
+        connection.execute('SELECT id FROM posts;').fetchone()
+        connection.close()
+        return True
+    except Exception as e:
+        app.logger.info(e)
+        return False
 
 
 def get_db_connection():
@@ -16,6 +37,7 @@ def get_db_connection():
     connection.row_factory = sqlite3.Row
     global connection_count
     connection_count += 1
+
     return connection
 
 
@@ -106,14 +128,21 @@ def create():
 
 @app.route('/healthz')
 def healthz():
-    """Define the healthcheck endpoint
     """
-    response = app.response_class(
-        response=json.dumps({"result": "OK - healthy"}),
-        status=200,
+    Defines the endpoint for Health check.
+    """
+    message = 'ERROR - unhealthy'
+    status = 500
+
+    if is_healthy():
+        message = 'OK - healthy'
+        status = 200
+
+    return app.response_class(
+        response=json.dumps({"result": message}),
+        status=status,
         mimetype='application/json'
     )
-    return response
 
 
 @app.route('/metrics')

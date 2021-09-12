@@ -5,7 +5,7 @@ docker build -t techtrends -f ./project/Dockerfile ./project
 docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-docker logs 2165dbf2fdfc399c6604ec8f5b931f9cd04f17cdc2253d63beb65a2fdcf6bebe
+docker logs 9da3b2ffa49549c3c2cf682988dc2619ed0eaaccd40d8aa4ead726bce7b7209e
 
 ## Logs from the container running the TechTrends application
  * Serving Flask app "app" (lazy loading)
@@ -13,23 +13,25 @@ docker logs 2165dbf2fdfc399c6604ec8f5b931f9cd04f17cdc2253d63beb65a2fdcf6bebe
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: off
-INFO:werkzeug:10/09/21 05:02:33,  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
-INFO:werkzeug:10/09/21 05:02:55, 172.17.0.1 - - [10/Sep/2021 05:02:55] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:10/09/21 05:02:55, 172.17.0.1 - - [10/Sep/2021 05:02:55] "GET /static/css/main.css HTTP/1.1" 200 -
-INFO:werkzeug:10/09/21 05:02:55, 172.17.0.1 - - [10/Sep/2021 05:02:55] "GET /favicon.ico HTTP/1.1" 404 -
-INFO:app:10/09/21 05:03:31, Article "2020 CNCF Annual Report" retrieved!
-INFO:werkzeug:10/09/21 05:03:31, 172.17.0.1 - - [10/Sep/2021 05:03:31] "GET /1 HTTP/1.1" 200 -
-INFO:werkzeug:10/09/21 05:03:33, 172.17.0.1 - - [10/Sep/2021 05:03:33] "GET / HTTP/1.1" 200 -
-INFO:app:10/09/21 05:03:36, About Us page retrieved
-INFO:werkzeug:10/09/21 05:03:36, 172.17.0.1 - - [10/Sep/2021 05:03:36] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:10/09/21 05:03:38, 172.17.0.1 - - [10/Sep/2021 05:03:38] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:10/09/21 05:03:43, 172.17.0.1 - - [10/Sep/2021 05:03:43] "GET /create HTTP/1.1" 200 -
-INFO:app:10/09/21 05:04:19, Article "App deployment with Docker" created!
-INFO:werkzeug:10/09/21 05:04:19, 172.17.0.1 - - [10/Sep/2021 05:04:19] "POST /create HTTP/1.1" 302 -
-INFO:werkzeug:10/09/21 05:04:19, 172.17.0.1 - - [10/Sep/2021 05:04:19] "GET / HTTP/1.1" 200 -
-INFO:app:10/09/21 05:04:22, Article "App deployment with Docker" retrieved!
-INFO:werkzeug:10/09/21 05:04:22, 172.17.0.1 - - [10/Sep/2021 05:04:22] "GET /7 HTTP/1.1" 200 -
-INFO:werkzeug:10/09/21 05:04:25, 172.17.0.1 - - [10/Sep/2021 05:04:25] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:10/09/21 05:04:35, 172.17.0.1 - - [10/Sep/2021 05:04:35] "GET /healthz HTTP/1.1" 200 -
-INFO:werkzeug:10/09/21 05:04:39, 172.17.0.1 - - [10/Sep/2021 05:04:39] "GET /metrics HTTP/1.1" 200 -
-INFO:werkzeug:10/09/21 05:05:07, 172.17.0.1 - - [10/Sep/2021 05:05:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:12/09/21 04:23:39,  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:12/09/21 04:24:04, 172.17.0.1 - - [12/Sep/2021 04:24:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:12/09/21 04:24:05, 172.17.0.1 - - [12/Sep/2021 04:24:05] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:12/09/21 04:24:05, 172.17.0.1 - - [12/Sep/2021 04:24:05] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:12/09/21 04:26:16, Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:12/09/21 04:26:16, 172.17.0.1 - - [12/Sep/2021 04:26:16] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:12/09/21 04:26:19, 172.17.0.1 - - [12/Sep/2021 04:26:19] "GET / HTTP/1.1" 200 -
+INFO:app:12/09/21 04:26:20, Article "Kubernetes v1.20 Release Notes" retrieved!
+INFO:werkzeug:12/09/21 04:26:20, 172.17.0.1 - - [12/Sep/2021 04:26:20] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:12/09/21 04:26:22, 172.17.0.1 - - [12/Sep/2021 04:26:22] "GET / HTTP/1.1" 200 -
+INFO:app:12/09/21 04:26:25, About Us page retrieved
+INFO:werkzeug:12/09/21 04:26:25, 172.17.0.1 - - [12/Sep/2021 04:26:25] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:12/09/21 04:26:29, 172.17.0.1 - - [12/Sep/2021 04:26:29] "GET /create HTTP/1.1" 200 -
+INFO:app:12/09/21 04:27:27, Article "Udacity launches Cloud Native Application Architecture Nanodegree!" created!
+INFO:werkzeug:12/09/21 04:27:27, 172.17.0.1 - - [12/Sep/2021 04:27:27] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:12/09/21 04:27:27, 172.17.0.1 - - [12/Sep/2021 04:27:27] "GET / HTTP/1.1" 200 -
+INFO:app:12/09/21 04:27:31, Article "Udacity launches Cloud Native Application Architecture Nanodegree!" retrieved!
+INFO:werkzeug:12/09/21 04:27:31, 172.17.0.1 - - [12/Sep/2021 04:27:31] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:12/09/21 04:27:47, 172.17.0.1 - - [12/Sep/2021 04:27:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:12/09/21 04:27:55, 172.17.0.1 - - [12/Sep/2021 04:27:55] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:12/09/21 04:28:03, 172.17.0.1 - - [12/Sep/2021 04:28:03] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:12/09/21 04:28:10, 172.17.0.1 - - [12/Sep/2021 04:28:10] "GET / HTTP/1.1" 200 -
